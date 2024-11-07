@@ -1,0 +1,18 @@
+#inputs
+Salary = int(input("What is your salary?: "))
+numDependents = int(input("How many dependents do you have?: "))
+
+
+
+State_tax =  0.065 * Salary #decimal for 6.5%
+Federal_tax =   0.28 * Salary#decimal for 28%
+Dependent_deduction=  0.025 * numDependents * Salary #decimal for 2.5%
+
+Total_withholding = State_tax + Federal_tax + Dependent_deduction
+Take_home_pay = Salary - Total_withholding
+Federal = Salary * Federal_tax
+print("State_tax: ${:.2f}".format(State_tax))
+print("Federal_tax: ${:.2f}".format(Federal_tax))
+print("Dependent_deduction: ${:.2f}".format(Dependent_deduction))
+print("Salary: ${:.2f}".format(Salary))
+print("Take_home_pay: ${:.2f}".format(Take_home_pay))
